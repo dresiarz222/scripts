@@ -1,0 +1,19 @@
+plr = game.Players.LocalPlayer
+hrp = plr.Character:WaitForChild("HumanoidRootPart",1000)
+hrp.Anchored = true
+task.wait(5)
+hrp.CFrame = CFrame.new(9e9,9e9,9e9)
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua"))()
+
+--game:GetService("Players").LocalPlayer.PlayerScripts.Scripts.GUIs:FindFirstChild("Auto Tapper")
+--game:GetService("Players").LocalPlayer.PlayerScripts.Scripts.GUIs:FindFirstChild("Auto Farm")
+
+plr = game.Players.LocalPlayer
+hrp = plr.Character:WaitForChild("HumanoidRootPart",1000)
+hrp.Anchored = true
+task.wait(5)
+hrp.CFrame = CFrame.new(9e9,9e9,9e9)
+
+
+game:GetService("ReplicatedStorage").Library.Signal

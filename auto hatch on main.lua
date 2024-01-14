@@ -62,7 +62,7 @@ hrp.Anchored = true
 task.wait(3)
 hrp.CFrame = CFrame.new(9e9,9e9,9e9)
 
-
+task.spawn(eggSkip)
 task.spawn(autoFruits)
 task.spawn(infPetSpeed)
 while getgenv().on do

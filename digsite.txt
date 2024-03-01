@@ -1,0 +1,28 @@
+plrs = game:GetService("Players")
+plr = plrs.LocalPlayer
+local libInstance = game:GetService("ReplicatedStorage"):WaitForChild("Library")
+task.wait(5)
+Lib = require(libInstance)
+
+function autoOrbs()
+    local Orbs = {}
+    local OtherOrbs = {}
+    while task.wait(0.1) do
+        for _,Orb in next, workspace:WaitForChild("__THINGS"):WaitForChild("Orbs"):GetChildren() do
+            if not tonumber(Orb.Name) then
+                table.insert(OtherOrbs,Orb.Name)
+            else
+                table.insert(Orbs,tonumber(Orb.Name))
+            end
+            Orb:Destroy()
+        end
+        if #Orbs > 0 then
+            Lib.Network.Fire("Orbs: Collect",Orbs)
+        end
+        if #OtherOrbs > 0 then
+            Lib.Network.Fire("Orbs_ClaimMultiple",{OtherOrbs})
+        end
+    end
+end
+
+task.spawn(autoOrbs)

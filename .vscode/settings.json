@@ -1,0 +1,10 @@
+{
+    "robloxLsp.diagnostics.globals": [
+        "getgenv",
+        "config",
+        "setfpscap"
+    ],
+    "robloxLsp.diagnostics.disable": [
+        "undefined-global"
+    ]
+}

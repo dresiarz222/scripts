@@ -1,6 +1,6 @@
 local VLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/dresiarz222/rgblib/main/main.lua"))()
 
-local win = VLib:Window("dougware v1", Color3.fromRGB(196, 40, 28))
+local win = VLib:Window("dougware v1", "a ps99 hub", Enum.KeyCode.RightShift)
 
 local ss1 = win:Tab("HOW TO USE")
 local ss = win:Tab("MAIN")
